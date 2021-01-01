@@ -1,9 +1,13 @@
-def bubbleSort(array):
+def insertionSort(array):
 
-	for i in range(len(array)):
-		for j in range(len(array)):
-			if array[i] < array[j]:
-				array[i], array[j] = array[j], array[i]
+    for i in range(1, len(array)):
+        j = i - 1
+        key = array[i]
+
+        while j >= 0 and array[j] > key:
+            array[j+1] = array[j]
+            j-=1
+        array[j+1] = key
 
 
 def test():
@@ -13,11 +17,11 @@ def test():
 
 	for test_case, expected in zip(test_cases, answers):
 
-		bubbleSort(test_case)
+		insertionSort(test_case)
 
 		assert test_case == expected, f"Wrong Answer.\nExpected: {expected}.\nActual: {actual}"
 
 	print("All test cases passed.")
 
 
-test()	
+test()
