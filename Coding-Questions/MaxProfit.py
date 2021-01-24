@@ -26,7 +26,7 @@ def maxProfit(prices):
 	minPrice = prices[0]
 	maxProft = 0
 
-	for i in range(len(prices)):
+	for i in range(1, len(prices)):
 		if prices[i] < minPrice:
 			minPrice = prices[i]
 		elif prices[i] - minPrice > maxProft:
