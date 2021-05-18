@@ -16,23 +16,23 @@ const jewelsAndStones = (jewels, stones) => {
   return count;
 };
 
-const test = () => {
-  testCases = [
-    { jewels: "abc", stones: "ac" },
-    { jewels: "Af", stones: "AaaddfFf" },
-    { jewels: "AYOPD", stones: "ayopd" },
-  ];
-  expecteds = [2, 3, 0];
+  const test = () => {
+    testCases = [
+      { jewels: "abc", stones: "ac" },
+      { jewels: "Af", stones: "AaaddfFf" },
+      { jewels: "AYOPD", stones: "ayopd" },
+    ];
+    expecteds = [2, 3, 0];
 
-  for (let i = 0; i < testCases.length; i++) {
-    const actual = jewelsAndStones(testCases[i].jewels, testCases[i].stones);
-    console.log(`For '${testCases[i]}' output obtained '${actual}'`);
-    console.assert(
-      actual == expecteds[i],
-      `Wrong answer. Expected: '${expecteds[i]}'. Found: '${actual}'`
-    );
-  }
-  console.log("Test completed.");
-};
+    for (let i = 0; i < testCases.length; i++) {
+      const actual = jewelsAndStones(testCases[i].jewels, testCases[i].stones);
+      console.log(`For '${testCases[i]}' output obtained '${actual}'`);
+      console.assert(
+        actual == expecteds[i],
+        `Wrong answer. Expected: '${expecteds[i]}'. Found: '${actual}'`
+      );
+    }
+    console.log("Test completed.");
+  };
 
-test();
+  test();
